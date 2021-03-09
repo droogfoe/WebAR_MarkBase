@@ -14,6 +14,7 @@
                 .querySelector(".say-hi-button")
                 .addEventListener("Switch", function(evt) {
                     evt.detail.el.setAttribute('gltf-model', 'knee-asset');
+                    alert("Switch!");
                 });
         };
     </script>
@@ -56,7 +57,7 @@
             init: function() {
                 this.el.sceneEl.addEventListener('markerFound', () => {
                     // redirect to custom URL e.g. google.com
-                    document.getElementById("log").innerHTML = 'https://www.google.com/';
+                    // document.getElementById("log").innerHTML = 'https://www.google.com/';
                 })
             }
         });
