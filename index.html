@@ -12,10 +12,11 @@
         AFRAME.registerComponent('registerevents', {
             init: function() {
                 var marker = this.el;
-
+                const gltf = document.querySelector('#animatedApple');
                 marker.addEventListener('markerFound', function() {
                     var markerId = marker.id;
                     console.log('markerFound', markerId);
+                    console.log(gltf.getAttribute('scale'));
                     // TODO: Add your own code here to react to the marker being found.
                 });
 
