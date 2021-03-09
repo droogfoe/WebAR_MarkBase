@@ -12,7 +12,7 @@
         AFRAME.registerComponent('registerevents', {
             init: function() {
                 var marker = this.el;
-                const gltf = document.querySelector('#animatedApple');
+                const gltf = document.querySelector('#nobuna-asset');
                 marker.addEventListener('markerFound', function() {
                     var markerId = marker.id;
                     console.log('markerFound', markerId);
