@@ -11,17 +11,6 @@
 
 </head>
 
-<script>
-    AFRAME.registerComponent('markerhandler', {
-        init: function() {
-            this.el.sceneEl.addEventListener('markerFound', () => {
-                // redirect to custom URL e.g. google.com
-                document.getElementById("log").innerHTML = 'https://www.google.com/';
-            })
-        }
-    });
-</script>
-
 <body style="margin: 0; overflow: hidden;">
 
     <div style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;'>
@@ -33,6 +22,14 @@
         function myFunction() {
             document.getElementById("log").innerHTML = "YOU TOUCH ME!";
         }
+        AFRAME.registerComponent('markerhandler', {
+            init: function() {
+                this.el.sceneEl.addEventListener('markerFound', () => {
+                    // redirect to custom URL e.g. google.com
+                    document.getElementById("log").innerHTML = 'https://www.google.com/';
+                })
+            }
+        });
     </script>
     <p id="log"></p>
 
