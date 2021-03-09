@@ -13,7 +13,6 @@
             init: function() {
                 var marker = this.el;
                 var x = document.getElementById("bowser-model");
-                const gltf = x.querySelector("a-entity");
                 marker.addEventListener('markerFound', function() {
                     var markerId = marker.id;
                     console.log('markerFound', markerId);
