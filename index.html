@@ -22,7 +22,7 @@
         function myFunction() {
             document.getElementById("log").innerHTML = "YOU TOUCH ME!";
         }
-        AFRAME.registerComponent('markerhandler', {
+        AFRAME.registerComponent('AAA', {
             init: function() {
                 this.el.sceneEl.addEventListener('markerFound', () => {
                     // redirect to custom URL e.g. google.com
@@ -41,7 +41,7 @@
             <a-asset-item id="knee-asset" src="assets/knee.glb"></a-asset-item>
         </a-assets>
 
-        <a-marker markerhandler value='6' id="animated-marker" type="pattern" preset="custom" url="assets/marker.patt" raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;" id="markerA">
+        <a-marker AAA value='6' id="animated-marker" type="pattern" preset="custom" url="assets/marker.patt" raycaster="objects: .clickable" emitevents="true" cursor="fuse: false; rayOrigin: mouse;" id="markerA">
             <a-entity id="bowser-model" scale="1 1 1" animation-mixer="loop: repeat" gltf-model="#nobuna-asset" class="clickable" gesture-handler></a-entity>
         </a-marker>
 
