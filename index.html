@@ -19,7 +19,6 @@
             embedded
             gesture-detector
         >
-            <button id="switchModel">Switch Model</button>
             <a-assets>
                 <a-asset-item
                     id="animated-asset"
@@ -48,6 +47,11 @@
             </a-marker>
 
             <a-entity camera></a-entity>
+            <div style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;'>
+                <button>
+                    HIDE OBJECTS
+                </button>
+            </div>
         </a-scene>
     </body>
 </html>
