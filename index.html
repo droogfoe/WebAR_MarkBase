@@ -12,8 +12,9 @@
         window.onload = function() {
             document
                 .querySelector(".say-hi-button")
-                .addEventListener("Switch", function(evt) {
-                    evt.detail.el.setAttribute('gltf-model', 'knee-asset');
+                .addEventListener("Switch", function() {
+                    document.setAttribute('gltf-model', 'knee-asset');
+                    // document.getElementById()
                     alert("Switch!");
                 });
         };
@@ -46,7 +47,7 @@
 <body style="margin: 0; overflow: hidden;">
 
     <div class="buttons">
-        <button class="say-hi-button">SAY HI!</button>
+        <button Switch class="say-hi-button">SAY HI!</button>
     </div>
 
     <script>
