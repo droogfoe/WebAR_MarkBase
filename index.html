@@ -9,13 +9,9 @@
     <script src="https://raw.githack.com/AR-js-org/studio-backend/master/src/modules/marker/tools/gesture-handler.js"></script>
     <!-- <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script> -->
     <script>
-        window, onload = function() {
-            document
-                .querySelector(".say-hi-button")
-                .addEventListener("click", function() {
-                    alert("Hit there!");
-                });
-        };
+        this.el.addEventListener('SwitchHandler', function(evt) {
+            evt.detail.el.setAttribute('material', 'opacity', '0.5');
+        });
     </script>
     <style>
         .buttons {
@@ -30,7 +26,7 @@
             z-index: 10;
         }
         
-        .say-hi-button {
+        .switch-button {
             padding: 0.25em;
             border-radius: 4px;
             border: none;
@@ -44,13 +40,8 @@
 
 <body style="margin: 0; overflow: hidden;">
 
-    <div class="buttons">
-        <button class="say-hi-button">SAY HI!</button>
-    </div>
-    <div style='position: fixed; top: 10px; width:100%; text-align: center; z-index: 1;'>
-        <button onclick="myFunction()">
-                SWITCH
-            </button>
+    <div class="switch-button">
+        <button class="switch-button" SwitchHandler>SWITCH</button>
     </div>
 
     <script>
