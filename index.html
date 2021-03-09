@@ -14,10 +14,11 @@
                 var marker = this.el;
                 var x = document.getElementById("bowser-model");
                 const gltf = x.querySelector("a-entity");
+                var size = gltf.getAttribute('scale');
                 marker.addEventListener('markerFound', function() {
                     var markerId = marker.id;
                     console.log('markerFound', markerId);
-                    console.log(gltf.getAttribute('scale'));
+                    console.log(size);
                     // TODO: Add your own code here to react to the marker being found.
                 });
 
