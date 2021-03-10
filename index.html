@@ -62,7 +62,7 @@
 <body style="margin: 0; overflow: hidden;">
 
     <div class="buttons">
-        <button>SAY HI!</button>
+        <button myFunction>SAY HI!</button>
     </div>
 
     <script>
@@ -73,7 +73,7 @@
             init: function() {
                 this.el.sceneEl.addEventListener('markerFound', () => {
                     // redirect to custom URL e.g. google.com
-                    // document.getElementById("log").innerHTML = 'https://www.google.com/';
+                    document.getElementById("log").innerHTML = 'https://www.google.com/';
                 })
             }
         });
