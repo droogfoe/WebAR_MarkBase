@@ -13,6 +13,7 @@
             init: function() {
                 var marker = this.el;
                 var x = document.getElementById("bowser-model");
+                console.log(x.el.id);
                 marker.addEventListener('markerFound', function() {
                     var markerId = marker.id;
                     console.log('markerFound', markerId);
@@ -26,6 +27,10 @@
                 });
             }
         });
+        AFRAME.registerComponent('Test', {
+            schema: {},
+
+        })
     </script>
     <style>
         .buttons {
