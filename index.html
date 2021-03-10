@@ -13,9 +13,10 @@
             init: function() {
                 var marker = this.el;
                 var x = document.getElementById("bowser-model");
-                console.log(marker);
                 marker.addEventListener('markerFound', function() {
                     var markerId = marker.id;
+                    var markerValue = marker.value;
+                    console.log('markerValue', markerValue);
                     console.log('markerFound', markerId);
                     // TODO: Add your own code here to react to the marker being found.
                 });
